@@ -10,10 +10,12 @@ export class UserForm extends Component {
         firstName: '',
         lastName: '',
         email: '',
+        phone: '',
         occupation: '',
         city: '',
         bio: '',
     }
+    
 
     //PROCEED TO NEXT FORM STEP
     nextStep = () => {
@@ -34,19 +36,24 @@ export class UserForm extends Component {
     //HANDLE CHANGE
     handleChange = input => e => {
         this.setState({ [input]: e.target.value });
+        
     }
 
     render() {
-        const { step, firstName, lastName, email, occupation, city, bio } = this.state;
-        const values = { firstName, lastName, email, occupation, city, bio }
+        
+        const { step, firstName, lastName, email, phone, occupation, city, bio } = this.state;
+        const values = { firstName, lastName, email, phone, occupation, city, bio }
 
         switch (step) {
             case 1:
                 return (
+
+                    
+
                     <FormUserDetails
                         nextStep={this.nextStep}
                         handleChange={this.handleChange}
-                        values={values}
+                        values={values}   
                     />
                 );
             case 2:
@@ -69,7 +76,9 @@ export class UserForm extends Component {
             case 4:
                 return <Success />;    
         }
+        
   }
+  
 }
 
 export default UserForm

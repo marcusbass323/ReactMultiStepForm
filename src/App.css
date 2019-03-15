@@ -18,15 +18,13 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.UserFormFlex {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Details {
+  margin-right: 150px;
+  width: 250px;
 }

@@ -16,11 +16,11 @@ export class FormUserDetails extends Component {
     }
 
     render() {
-        const { values: {firstName, lastName, email, occupation, city, bio} } = this.props;
+        const { values: {firstName, lastName, email, phone, occupation, city, bio} } = this.props;
     return (
       <MuiThemeProvider>
             <React.Fragment>
-             <AppBar title="Confirm User Data"/>   
+             <AppBar showMenuIconButton={false} title="Confirm User Data"/>   
                 <List>
                     <ListItem
                         primaryText="First Name"
@@ -33,6 +33,10 @@ export class FormUserDetails extends Component {
                     <ListItem
                         primaryText="Email"
                         secondaryText={email}
+                    />
+                    <ListItem
+                        primaryText="Phone"
+                        secondaryText={phone}
                     />
                     <ListItem
                         primaryText="Occupation"
